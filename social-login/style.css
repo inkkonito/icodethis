@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+:root {
+  --blue: #2446c0;
+  --lightblue: #4767d8;
+  --grey: #dce5f9;
+  --lightgrey: #8295df;
+}
+
+::placeholder {
+  color: #fff;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.social {
+  width: 700px;
+  min-height: 250px;
+  background: linear-gradient(to left, #2446c0, #4767d8);
+  border-radius: 15px;
+  outline: 15px solid #dce5f9;
+  padding: 10px;
+  color: white;
+}
+
+.social-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 10px 120px 10px;
+}
+
+.social-container h1 {
+  margin: 10px;
+  letter-spacing: 0.5px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+p.intro {
+  margin: 5px 0 10px;
+  font-weight: 400;
+  font-size: 0.9rem;
+  padding: 10px;
+  width: 60%;
+  letter-spacing: 0.5px;
+}
+
+form {
+  width: 100%;
+}
+fieldset {
+  border: none;
+}
+
+fieldset p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+  background: #ffffff63;
+  padding: 0.7rem;
+  border: 1px solid #dde5f9;
+}
+
+input[type="email"] {
+  margin: 5px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 0 1rem;
+}
+
+button {
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  width: 2.2rem;
+  height: 2.2rem;
+  color: #1e40bc;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-pictures {
+  margin-top: -25px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.social-pictures img {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #fff;
+  padding: 0.3rem;
+}
