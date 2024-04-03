@@ -102,7 +102,7 @@ body {
 
 .menu-middle button:hover {
   /* font-size: 0.9rem; */
-  box-shadow: none;
+  box-shadow: 3px 1px 3px #6f8cd5;
 }
 .menu-bottom {
   margin-top: 20px;
@@ -112,16 +112,17 @@ body {
   padding-left: 0;
 }
 
-.menu-bottom svg {
+.menu-bottom i {
   margin-left: 20px;
 }
 .nav > li {
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 15% 85%;
   align-items: center;
   cursor: pointer;
-  gap: 0.7rem;
-  padding-block: 1rem;
+  gap: 0.4rem;
+  padding: 1rem;
+  letter-spacing: 0.8px;
 }
 
 .nav > li:hover {
@@ -135,4 +136,10 @@ body {
   content: "";
   border-left: 4px solid #4c70d6;
   height: 100%;
+}
+
+.cross {
+  position: absolute;
+  bottom: 40px;
+  right: 50px;
 }
