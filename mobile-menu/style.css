@@ -31,19 +31,19 @@ body {
 
 .menu-top {
   display: flex;
-  /* background: linear-gradient(to left, #4c70d6, #6f8cd5); */
   color: white;
   padding: 10px;
-  min-height: 135px;
+  min-height: 120px;
+  gap: 1.5rem;
 }
 
 .blue-background {
   background: linear-gradient(to right, #6f8cd6, #4c6ed7);
   width: 120%;
-  height: 200px;
+  height: 190px;
   border-bottom-left-radius: 2rem;
   position: absolute;
-  top: -4rem;
+  top: -5rem;
   left: -1.5rem;
   transform: rotate(-15deg);
   z-index: -1;
@@ -62,10 +62,12 @@ body {
   justify-content: center;
 }
 
-.top-right-menu h1 {
+.top-right-menu h3 {
+  font-weight: 600;
 }
 
-.top-right-menu h3 {
+.top-right-menu p {
+  opacity: 0.8;
 }
 
 .top-left-menu img {
@@ -78,4 +80,59 @@ body {
 
 .menu-list-item {
   display: flex;
+}
+
+.menu-middle {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.menu-middle button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--middleblue);
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  box-shadow: 3px 3px 3px #6f8cd5;
+}
+
+.menu-middle button:hover {
+  /* font-size: 0.9rem; */
+  box-shadow: none;
+}
+.menu-bottom {
+  margin-top: 20px;
+}
+.menu-bottom .nav {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.menu-bottom svg {
+  margin-left: 20px;
+}
+.nav > li {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.7rem;
+  padding-block: 1rem;
+}
+
+.nav > li:hover {
+  background: #f7fbff;
+  color: var(--middleblue);
+  position: relative;
+}
+
+.nav > li:hover::before {
+  position: absolute;
+  content: "";
+  border-left: 4px solid #4c70d6;
+  height: 100%;
 }
