@@ -6,6 +6,7 @@
   box-sizing: border-box;
   list-style-type: none;
   font-family: "IBM Plex Sans", sans-serif;
+  color: #9ba8e8;
 }
 
 body {
@@ -18,7 +19,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: red;
+  background: #1e274d;
   width: 380px;
   height: 380px;
   padding: 3rem;
@@ -39,6 +40,7 @@ body {
 .middle-part h6 {
   margin: 0.3rem;
 }
+
 .password-box {
   display: flex;
   align-items: center;
@@ -49,45 +51,94 @@ body {
 .password {
   display: flex;
   gap: 0.3rem;
-  border: 1px solid grey;
+  border: 1px solid #9ba8e8;
   padding: 1rem;
   background: white;
   border-radius: 0.5rem;
   width: 100%;
+  background: #1e274d;
 }
 
 input[type="password"] {
   width: 100%;
   border: none;
+  background: transparent;
 }
 
 .staysigned {
+  width: 90%;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  margin-top: 0.5rem;
-  gap: 1rem;
+  margin-top: 0.8rem;
+  gap: 0.2rem;
 }
 
-.staysigneddin {
-  width: 4rem;
-  height: 2.5rem;
-  border: 1px solid grey;
-  background: white;
+.button {
+  width: 3rem;
+  height: 1.5rem;
+  background: #1e274d;
+  border: 1px solid #9ba8e8;
   position: relative;
   border-radius: 1.5rem;
+  outline-offset: 0.1rem;
+  outline: 0.15rem solid #cd80df;
 }
 
-.staysigneddin .status {
+.button::before {
+  content: "";
   position: absolute;
-  width: 1rem;
-  height: 1rem;
-  background: black;
-  border-radius: 50%;
-  top: 50%;
-  left: 25%;
-  transform: translate(-50%, -50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  background: #9ba8e8;
+  border-radius: 1.3rem;
+  margin: 0.04rem;
+  transition: 0.2s ease-in;
 }
 
-.staysigneddin .status:active {
-  left: 75%;
+input:checked + .button {
+  background: #1e274d;
+}
+
+input:checked + .button::before {
+  transform: translateX(1.5rem);
+  animation: toggle;
+}
+
+button {
+  width: max-content;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: white;
+  background: #444e7c;
+  color: #1e274d;
+  margin-left: 2.5rem;
+}
+
+.staysigned input {
+  display: none;
+}
+.bottom-part {
+  margin-top: 1.5rem;
+}
+.bottom-part a {
+  text-decoration: none;
+  border-bottom: 1px dashed #9ba8e8;
+  font-size: 0.8rem;
+}
+
+@keyframes toggle {
+  0% {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+  50% {
+    width: 1.6rem;
+    height: 1.2rem;
+    margin: 1rem;
+  }
+  100% {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
 }
